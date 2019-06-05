@@ -2,16 +2,23 @@
 import React, { Component } from "react";
 import App from '../../App'
 
-class Form extends React.Component{
-    return() {
-        
-        <input type="text"
-        name="todo" 
-        placeholder="Add Todo..." className="todoInputField"
-        value="text"
-        onChange="text"/>
-    }
 
-}
-    
-export default Form;
+
+const TodoForm = props => {
+    return (
+        <form>
+            <input
+                type="text"
+                placeholder="Todo"
+                value={prop.todo}
+                name="todo"
+                className="todoInput"
+                onChange={prop.onchangeHandle}
+            />
+
+            <button>Add todo</button>
+            <button>Clear Completed</button>
+        </form>
+    );
+};
+export default TodoForm
